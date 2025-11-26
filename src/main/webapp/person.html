@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Person Data Form</title>
+  <style>
+    /* 🌆 Global Styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #0f0f0f, #1a1a1a, #330000);
+      font-family: "Poppins", Arial, sans-serif;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* 🧾 Form Container */
+    .form-container {
+      width: 400px;
+      padding: 35px 40px;
+      background: rgba(30, 30, 30, 0.95);
+      border: 1px solid rgba(255, 50, 50, 0.4);
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(255, 0, 0, 0.3),
+                  inset 0 0 10px rgba(255, 0, 0, 0.2);
+      backdrop-filter: blur(8px);
+      animation: fadeIn 1s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .form-container h2 {
+      text-align: center;
+      color: #ff4c4c;
+      letter-spacing: 1px;
+      margin-bottom: 25px;
+    }
+
+    /* 🧑‍💻 Labels & Inputs */
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #ddd;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+      width: 100%;
+      padding: 10px 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ff4c4c;
+      border-radius: 8px;
+      background-color: #111;
+      color: #fff;
+      font-size: 15px;
+      transition: all 0.3s ease;
+    }
+
+    input[type="text"]:focus,
+    input[type="number"]:focus {
+      border-color: #ff7b7b;
+      box-shadow: 0 0 8px #ff4c4c;
+      outline: none;
+    }
+
+    /* 👩‍🦰 Gender Section */
+    .gender {
+      margin: 15px 0;
+      color: #ccc;
+    }
+
+    .gender label {
+      margin-right: 10px;
+      font-weight: normal;
+    }
+
+    .gender input {
+      margin-right: 6px;
+    }
+
+    /* 🔘 Submit Button */
+    input[type="submit"] {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(90deg, #ff4c4c, #b30000);
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3);
+    }
+
+    input[type="submit"]:hover {
+      background: linear-gradient(90deg, #ff6666, #ff0000);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 14px rgba(255, 0, 0, 0.5);
+    }
+
+    input[type="submit"]:active {
+      transform: scale(0.98);
+    }
+
+    /* 💡 Footer */
+    .footer-text {
+      text-align: center;
+      font-size: 12px;
+      color: #aaa;
+      margin-top: 12px;
+    }
+  </style>
+</head>
+<body>
+  <form class="form-container" action="ValidationServlet" method="post">
+    <h2>Person Data Form</h2>
+
+    <label>Name:</label>
+    <input type="text" name="name" placeholder="Enter your name" required>
+
+    <label>Age:</label>
+    <input type="number" name="age" placeholder="Enter your age" required>
+
+    <label>Country:</label>
+    <input type="text" name="country" placeholder="Enter your country" required>
+
+    <label>Adhar:</label>
+    <input type="text" name="adhar" placeholder="Enter Aadhar number" required>
+
+    <div class="gender">
+      <label>Gender:</label><br>
+      <input type="radio" name="gender" value="male" required> Male
+      <input type="radio" name="gender" value="female" required> Female
+    </div>
+
+    <input type="submit" value="Submit">
+
+    <p class="footer-text">© 2025 Person Data Form | Designed with ❤️</p>
+  </form>
+</body>
+</html>

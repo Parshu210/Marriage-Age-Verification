@@ -1,0 +1,60 @@
+# ======================
+# Java / JSP / Servlet Project
+# ======================
+
+# --- Compiled class files ---
+*.class
+*.war
+*.ear
+
+# --- Logs ---
+*.log
+
+# --- Tomcat / Server files ---
+/target/
+/build/
+/out/
+/tmp/
+/work/
+/logs/
+/webapps/
+
+# --- Eclipse Files ---
+.project
+.classpath
+.settings/
+.metadata/
+
+# --- IntelliJ Files ---
+.idea/
+*.iml
+*.iws
+out/
+
+# --- Maven ---
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# --- Gradle ---
+.gradle/
+build/
+
+# --- OS generated files ---
+Thumbs.db
+.DS_Store
+ehthumbs.db
+
+# --- Package files ---
+*.jar
+*.zip
+*.tar.gz
+*.rar
+
+# --- Environment / Credentials ---
+*.env
+*.properties
+!src/main/resources/*.properties  # keep resource properties
